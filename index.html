@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comunidade & Suporte - Aviator</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        /* Reset básico */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        body, html {
+            height: 100%;
+            overflow-x: hidden;
+        }
+
+        /* Configuração do Fundo */
+        .background-container {
+            background-image: url('https://i.postimg.cc/JnRDKdxC/Picsart-25-12-23-11-42-56-637.jpg');
+            background-size: cover;
+            background-position: center top; /* Foca mais na parte de cima da imagem */
+            background-attachment: fixed;
+            min-height: 100vh;
+            width: 100%;
+            position: relative;
+        }
+
+        /* Camada escura ajustada (Degradê) */
+        .overlay {
+            /* O degradê agora começa transparente no topo (para ver o avião) e escurece em baixo */
+            background: linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgba(0,0,0,0.4) 30%, rgba(0,0,0,0.95) 100%);
+            width: 100%;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start; /* Começa do topo, mas o padding empurra */
+            padding: 20px;
+            /* AQUI É O PULO DO GATO: Empurra o conteúdo para baixo da "linha rosa" (avião) */
+            padding-top: 45vh; 
+            text-align: center;
+        }
+
+        /* Estilos de Texto - Tamanhos reduzidos */
+        h1, h2 {
+            color: #ffffff;
+            text-transform: uppercase;
+            margin-bottom: 15px;
+            font-weight: 900;
+            line-height: 1.2;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.8);
+        }
+
+        h1 { font-size: 1.5rem; } /* Reduzido de 2rem */
+        h2 { font-size: 1.3rem; margin-top: 30px; } /* Reduzido de 1.8rem */
+
+        p {
+            color: #eeeeee;
+            font-size: 0.9rem; /* Reduzido de 1rem */
+            line-height: 1.5;
+            margin-bottom: 20px;
+            max-width: 600px;
+            font-weight: 500;
+        }
+
+        /* Classe para destaque em Vermelho */
+        .destaque {
+            color: #ff3333;
+            font-weight: 800;
+            text-transform: uppercase;
+        }
+
+        /* Estilos dos Botões - Mais finos */
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            /* Padding reduzido na vertical (12px) para ficar mais fino */
+            padding: 12px 30px; 
+            border-radius: 50px;
+            text-decoration: none;
+            color: white;
+            font-weight: 800;
+            font-size: 0.95rem; /* Texto do botão um pouco menor */
+            width: 100%;
+            max-width: 320px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+            transition: transform 0.2s, box-shadow 0.2s;
+            text-transform: uppercase;
+            margin-bottom: 10px;
+            border: 2px solid transparent;
+        }
+
+        .btn:active {
+            transform: scale(0.98);
+        }
+
+        .btn i {
+            margin-right: 10px;
+            font-size: 1.2rem;
+        }
+
+        /* Botão Telegram */
+        .btn-telegram {
+            background-color: #0088cc;
+            border-color: #0088cc;
+        }
+        .btn-telegram:hover {
+            background-color: #0077b5;
+            box-shadow: 0 0 20px rgba(0, 136, 204, 0.6);
+        }
+
+        /* Botão WhatsApp */
+        .btn-whatsapp {
+            background-color: #25d366;
+            border-color: #25d366;
+        }
+        .btn-whatsapp:hover {
+            background-color: #1ebe57;
+            box-shadow: 0 0 20px rgba(37, 211, 102, 0.6);
+        }
+
+        /* Separador visual */
+        .divider {
+            width: 60%;
+            height: 1px;
+            background: rgba(255,255,255,0.2);
+            margin: 25px 0;
+        }
+
+        /* Animação de pulso nos botões */
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.02); }
+            100% { transform: scale(1); }
+        }
+        .btn {
+            animation: pulse 2s infinite;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="background-container">
+        <div class="overlay">
+            
+            <h1>Aprenda mais sobre o <span class="destaque">Aviator</span> e participe da comunidade</h1>
+            
+            <a href="https://t.me/+qFGl1pPG1L0yNDMx" target="_blank" class="btn btn-telegram">
+                <i class="fab fa-telegram-plane"></i> Entrar no Grupo
+            </a>
+
+            <p style="margin-top: 15px;">
+                Conteúdo focado em entendimento do jogo, troca de <span class="destaque">experiências</span> e <span class="destaque">aprendizado</span>. 
+                No grupo, além do conteúdo, acontecem sorteios de banca de forma transparente.
+            </p>
+
+            <div class="divider"></div>
+
+            <h2>Conversar no WhatsApp</h2>
+            
+            <p>
+                Para quem prefere conversar diretamente, tirar <span class="destaque">dúvidas</span>, entender melhor como o <span class="destaque">Aviator</span> funciona no dia a dia.
+            </p>
+
+            <a href="#" id="whatsapp-btn" class="btn btn-whatsapp">
+                <i class="fab fa-whatsapp"></i> Conversar no WhatsApp
+            </a>
+            
+            <div style="height: 50px;"></div>
+
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const whatsappBtn = document.getElementById('whatsapp-btn');
+            const phoneNumber = "552199971264";
+
+            const messages = [
+                "Oi! Vi o conteúdo sobre Aviator e fiquei curioso. Pode me explicar melhor?",
+                "Olá! Vi o post sobre Aviator e queria entender melhor como funciona.",
+                "Vi a publicação e queria aprender mais sobre o Aviator.",
+                "Vocês explicam como funciona o Aviator na prática?",
+                "Queria aprender mais sobre Aviator, pode me orientar?",
+                "Dá pra entender melhor o Aviator com vocês?",
+                "No Aviator, como funciona o momento de sair?",
+                "Tem alguma forma de estudar melhor o Aviator?",
+                "O que vale a pena observar no Aviator?",
+                "Vi muita gente falando de Aviator e queria trocar uma ideia.",
+                "Queria entender melhor esse jogo do Aviator.",
+                "Vi o conteúdo e fiquei interessado no Aviator."
+            ];
+
+            whatsappBtn.addEventListener('click', function(e) {
+                e.preventDefault();
+                const randomIndex = Math.floor(Math.random() * messages.length);
+                const randomMessage = messages[randomIndex];
+                const finalUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(randomMessage)}`;
+                window.open(finalUrl, '_blank');
+            });
+        });
+    </script>
+
+</body>
+</html>
