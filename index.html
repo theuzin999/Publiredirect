@@ -26,7 +26,7 @@
 
         /* Configuração do Fundo */
         .background-container {
-            background-image: url('https://i.postimg.cc/JnRDKdxC/Picsart-25-12-23-11-42-56-637.jpg');
+            background-image: url('https://i.postimg.cc/J4HPksWF/Picsart-26-02-14-15-45-49-716.jpg');
             background-size: cover;
             background-position: center top;
             background-attachment: fixed;
@@ -45,25 +45,18 @@
             align-items: center;
             justify-content: flex-start;
             padding: 20px;
-            padding-top: 45vh; 
+            /* ALTERAÇÃO: Reduzido de 45vh para 15vh para subir o conteúdo */
+            padding-top: 15vh; 
             text-align: center;
         }
 
-        /* Container do Título com Logo */
+        /* Container do Título */
         .title-container {
             display: flex;
             align-items: center;
             justify-content: center;
-            gap: 15px;
-            margin-bottom: 15px;
-            flex-wrap: wrap;
-        }
-
-        .logo-img {
-            width: 50px;
-            height: 50px;
-            border-radius: 10px;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.5);
+            margin-bottom: 25px; /* Aumentei um pouco a margem inferior já que tiramos o texto */
+            width: 100%;
         }
 
         /* Estilos de Texto */
@@ -99,7 +92,7 @@
             display: inline-flex;
             align-items: center;
             justify-content: center;
-            padding: 12px 30px; 
+            padding: 12px 20px; /* Ajustei padding lateral */
             border-radius: 50px;
             text-decoration: none;
             font-weight: 800;
@@ -120,6 +113,15 @@
         .btn i {
             margin-right: 10px;
             font-size: 1.2rem;
+        }
+
+        /* Novo estilo para a Logo dentro do botão */
+        .btn-logo-img {
+            width: 28px;
+            height: 28px;
+            border-radius: 6px;
+            margin-right: 12px;
+            object-fit: cover;
         }
 
         /* Botão Plataforma (Branco com letra preta) */
@@ -162,6 +164,23 @@
             animation: pulse 2s infinite;
         }
 
+        /* ALTERAÇÃO: Media Query para telas pequenas (Celular) */
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 1.2rem; /* Fonte menor no celular */
+            }
+            h2 {
+                font-size: 1.1rem;
+            }
+            .btn {
+                font-size: 0.85rem;
+                padding: 12px 15px;
+            }
+            .overlay {
+                padding-top: 12vh; /* Ainda mais alto em telas muito pequenas se necessário */
+            }
+        }
+
     </style>
 </head>
 <body>
@@ -171,15 +190,11 @@
             
             <div class="title-container">
                 <h1>Plataforma utilizada no vídeo</h1>
-                <img src="https://i.postimg.cc/05t3pZfb/Picsart-26-02-14-11-11-43-318.jpg" alt="Logo SSSGame" class="logo-img">
-            </div>
-
-            <p>
-                Crie sua conta na plataforma agora mesmo. Basta acessar abaixo, iniciar suas operações e colocar em prática tudo o que você aprendeu para <span class="destaque">faturar</span>!
-            </p>
+                </div>
 
             <a href="https://www.sssgame33.com?code=308221" target="_blank" class="btn btn-plataforma">
-                <i class="fas fa-play"></i> Cadastrar e Operar
+                <img src="https://i.postimg.cc/05t3pZfb/Picsart-26-02-14-11-11-43-318.jpg" alt="Logo SSSGame" class="btn-logo-img">
+                Cadastrar e Operar
             </a>
 
             <div class="divider"></div>
