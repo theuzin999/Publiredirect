@@ -402,28 +402,7 @@ GPT SCRIPT:
 
 
 DEV+LOGUIN
-
-
-
 <script>
-
-  // 1) checa session
-
-  (function requireSession() {
-
-    const token = sessionStorage.getItem('sessionId');
-
-    if (!token) {
-
-      window.location.replace('/');
-
-      return;
-
-    }
-
-  })();
-
-
 
   // 2) anti-devtools
 
